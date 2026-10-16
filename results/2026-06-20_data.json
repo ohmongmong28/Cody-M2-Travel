@@ -1,0 +1,34 @@
+{
+  "travel_date": "2026-06-20",
+  "recommendations": [
+    {
+      "city": "제주",
+      "weather": "온화한 날씨",
+      "events": [
+        "자연 경관 탐방"
+      ],
+      "reason": "기본 추천지로 대체되었습니다."
+    }
+  ],
+  "places_by_city": {
+    "제주": []
+  },
+  "errors": [
+    {
+      "step": "llm_recommend",
+      "type": "PARSE_ERROR",
+      "message": "1차 복수 추천 JSON 파싱 실패: Error code: 400 - {'error': {'message': 'Requested feature is not supported.', 'type': 'invalid_request_error', 'code': 'unsupported_feature'}}"
+    },
+    {
+      "step": "place_search",
+      "city": "제주",
+      "type": "NETWORK_OR_API_ERROR",
+      "message": "No connection adapters were found for '[https://dapi.kakao.com/v2/local/search/keyword.json](https://dapi.kakao.com/v2/local/search/keyword.json)'"
+    },
+    {
+      "step": "generate_report",
+      "type": "LLM_REPORT_ERROR",
+      "message": "Error code: 404 - {'error': {'message': 'Model not found.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    }
+  ]
+}
